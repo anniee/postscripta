@@ -1,0 +1,16 @@
+h1 {
+	font-family: 'Cedarville Cursive', cursive;
+}
+
+h2 {
+/*	font-family: 'Bad Script', cursive;
+*/	font-family: 'Josefin Sans', sans-serif;
+}
+
+.quill {
+	max-width: 300px;
+}
+
+.navbar-brand {
+	font-family: 'Cedarville Cursive', cursive;
+}
