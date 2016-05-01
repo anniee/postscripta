@@ -2,9 +2,13 @@ h1 {
 	font-family: 'Cedarville Cursive', cursive;
 }
 
-h2 {
+h3, textarea {
 /*	font-family: 'Bad Script', cursive;
 */	font-family: 'Josefin Sans', sans-serif;
+}
+
+#logo {
+  display: inline;
 }
 
 .quill {
@@ -13,4 +17,12 @@ h2 {
 
 .navbar-brand {
 	font-family: 'Cedarville Cursive', cursive;
+}
+
+.navbar {
+    background-color: white;
+}
+
+textarea {
+  margin: 20px
 }
