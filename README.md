@@ -12,25 +12,25 @@ by [Anne P. Vetto](http://www.annevetto.com)
 
 To run the postscripta web app locally:
 
-1. Clone the postscripta repository
+Clone the postscripta repository
 
 ```$ git clone https://github.com/anniee/postscripta.git
 ```
 
-2. Create and activate a virtual environment
+Create and activate a virtual environment
 
 ```
 $ virtualenv env
 $ source env/bin/activate
 ```
 
-3. Install requirements
+Install requirements
 
 ```
 $ pip install -r requirements.txt
 ```
 
-4. Run server and visit http://wwww.localhost:5000/
+Run server and visit http://wwww.localhost:5000/
 
 ```
 $ python server.py
