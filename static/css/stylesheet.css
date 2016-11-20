@@ -2,17 +2,20 @@ h1 {
 	font-family: 'Cedarville Cursive', cursive;
 }
 
-h3, textarea {
-/*	font-family: 'Bad Script', cursive;
-*/	font-family: 'Josefin Sans', sans-serif;
-}
+h6, textarea {
+	font-family: 'Cedarville Cursive', cursive;
 
+/*font-family: 'Josefin Sans', sans-serif;*/
+}
+.postscripta-header {
+  display: inline;
+}
 #logo {
   display: inline;
 }
 
 .quill {
-	max-width: 300px;
+	max-width: 100px;
 }
 
 .navbar-brand {

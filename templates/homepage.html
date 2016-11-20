@@ -3,7 +3,29 @@
 {% block title %}postscripta{% endblock %}
 
 {% block content %}
-<h3>a place for preserving and sharing handwriting, stories, images and experiences that define us</h3>
+<!-- <img class="quill postscripta-header" src="/static/img/quill.png"> -->
+<h4>creative assistive technology for personalized text</h4>
 
-<img class="quill" src="/static/img/quill.png">
+<label>Name:</label>
+<input type="text" ng-model="yourName" placeholder="Enter your name here"></input>
+
+<h1>Hello, {{ '{{yourName}}' }}</h1>
+
+
+<script>
+
+var alphabet = {};
+
+alphabet.a = "Aa";
+
+
+var bImg = new Image();
+bImg.src = "/static/img/bImg.png";
+
+alphabet.b = bImg;
+console.log(alphabet);
+
+</script>
+
+
 {% endblock %}

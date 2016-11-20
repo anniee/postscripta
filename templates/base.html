@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100italic' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 	<link rel="stylesheet" href="/static/css/stylesheet.css">
 
 	<title>{% block title %}{% endblock %}</title>
@@ -15,7 +15,8 @@
     <div class="container">
 
         <div class="navbar-header">
-            <h1>postscripta</h1>
+            <img class="quill postscripta-header" src="/static/img/quill.png">
+            <h1 class="postscripta-header">postscripta</h1>
 <!--             <img id="logo" src="/static/img/quill.png" style="max-height:60px">
  --><!--             <a class="navbar-brand" href="/">postscripta</a>
  -->    </div>
@@ -27,7 +28,7 @@
                         <img class="" src="">scribis</a>
                 </li>
                 <li>
-                	<a href="/posts">posts</a>
+                	<a href="#">posts</a>
                 </li>
                 <li><a href="#">login</a></li>
             </ul>
