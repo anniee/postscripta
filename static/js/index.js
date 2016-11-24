@@ -4,6 +4,7 @@ angular.module('postscriptaApp', [])
     var vm = this;
 
     vm.typedArray = [];
+    vm.handwrittenArray = [];
 
     // example of array of objects, maybe this structure makes more sense?
     // vs. just an object
@@ -14,9 +15,12 @@ angular.module('postscriptaApp', [])
 //CREATE DICTIONARY FOR LETTER TO IMAGE SOURCE
     // store obj with key being string of letter typed (first lower case)
     // and value being src for image corresponding to that letter
+    // eventually, refactor to JSON
     var alphabetList = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o'];
 
-    for(i=0;i<27;i++){
+
+    // eventually, abstract out to a service to create alphabet, instantiate here
+    for(i=0;i<=25;i++){
       var letterChar = alphabetList[i];
       var imgSource = '/static/img/' + letterChar + 'Img.png';
       // push key and val into alphabet obj
@@ -54,6 +58,9 @@ angular.module('postscriptaApp', [])
         var theImg = new Image();
         // theImg.src = the source of the img from object
         // theImg.src =
+        // or do we need to add both img and src to an object, since need a new image
+        // instantiated for displaying on page?
+        // add to new array for display using src of image, handwrittenArray
       }
     };
 
@@ -65,8 +72,7 @@ angular.module('postscriptaApp', [])
       var charStr = String.fromCharCode(charCode);
       console.log(charStr);
 
-      //add
-      // vm.writeLetter(charStr);
+      //add typed key (charStr) to typedArray
     return charStr;
     };
 
