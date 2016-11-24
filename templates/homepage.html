@@ -3,29 +3,97 @@
 {% block title %}postscripta{% endblock %}
 
 {% block content %}
-<!-- <img class="quill postscripta-header" src="/static/img/quill.png"> -->
-<h4>creative assistive technology for personalized text</h4>
+
+<h4>creative assistitve technology for personalized text</h4>
 
 <label>Name:</label>
-<input type="text" ng-model="yourName" placeholder="Enter your name here"></input>
-
-<h1>Hello, {{ '{{yourName}}' }}</h1>
+<input type="text"></input>
 
 
+{% endblock %}
+
+
+
+<!-- <div class="container" ng-controller="AlphabetDisplayController as alphaDisplayCtrl">
+  <h4>creative assistive technology for personalized text</h4>
+
+  <label>Name:</label>
+  <input type="text" ng-model="alphaDisplay.yourName" placeholder="Enter your name here"></input>
+
+  <h1>Hello, {{ '{{alphaDisplay.yourName}}' }}</h1>
+  <div>
+      <img src="{{'{{alphaDisplayCtrl.beeImg}}'}}" ng-if="alphaDisplayCtrl.isBee">
+
+      <div ng-repeat="imageSrc in alphaDisplayCtrl.alphaImages" ng-if="alphaDisplayCtrl.writeOutLetters">
+        <img src="{{ '{{alphaDisplayCtrl.imageSrc}}' }}" ng-if="alphaDisplayCtrl.isBee">
+      </div>
+  </div>
+</div>
 <script>
 
-var alphabet = {};
+// document.onkeypress = function(evt) {
+//     evt = evt || window.event;
+//     var charCode = evt.keyCode || evt.which;
+//     var charStr = String.fromCharCode(charCode);
+//     console.log(charStr);
+//     return charStr;
+// };
 
-alphabet.a = "Aa";
 
 
-var bImg = new Image();
-bImg.src = "/static/img/bImg.png";
 
-alphabet.b = bImg;
-console.log(alphabet);
+angular.module('postscriptaApp', [])
+  .controller('AlphabetDisplayController', function() {
+    var alphaDisplay = this;
+    alphaDisplay.letter = '';
+    alphaDisplay.yourName = 'anne';
+    alphaDisplay.isBee = false;
+
+    alphaDisplay.bImg = [
+      {code:'Bb', sorc: '/static/img/bImg.png'}
+    ];
+
+
+    var alphabet = {};
+
+    alphabet.a = "Aa";
+
+
+    var bImg = new Image();
+    bImg.src = "/static/img/bImg.png";
+    srrc = bImg.src;
+
+    alphaDisplay.writeOutLetters = false;
+    alphabet.b = bImg;
+    console.log(alphabet);
+    alphaDisplay.beeImg = alphaDisplay.bImg[0].sorc;
+    console.log(alphaDisplay.bImg[0].sorc);
+
+    alphaDisplay.writeLetter = function(charStr){
+      console.log('write letter charstr', charStr);
+      var nextImg = newImage();
+    };
+
+    alphaDisplay.alphaImages = ['/static/img/bImg.png', '/static/img/aImg.png']
+
+    document.onkeypress = function(evt) {
+      evt = evt || window.event;
+      var charCode = evt.keyCode || evt.which;
+      var charStr = String.fromCharCode(charCode);
+      console.log(charStr);
+      if(charStr == 'b') {
+        console.log('yes, b');
+        alphaDisplay.isBee = true;
+      };
+      // alphaDisplay.writeLetter(charStr);
+      alphaDisplay.writeOutLetters = true;
+    return charStr;
+};
+
+
+  });
 
 </script>
 
 
-{% endblock %}
+ -->

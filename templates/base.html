@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="postscriptaApp">
 <head>
-	<link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'> -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<!-- <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'> -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+    <script type="text/javascript" src="/static/js/index.js"></script>
 	<link rel="stylesheet" href="/static/css/stylesheet.css">
 
-	<title>{% block title %}{% endblock %}</title>
+	<title>postscripta</title>
 </head>
 <body>
 	<div class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
+        <div class="container">
+            <div class="navbar-header">
+                <img class="quill postscripta-header" src="/static/img/quill.png">
+                <h1 class="postscripta-header">postscripta</h1>
+            </div>
 
-        <div class="navbar-header">
-            <img class="quill postscripta-header" src="/static/img/quill.png">
-            <h1 class="postscripta-header">postscripta</h1>
-<!--             <img id="logo" src="/static/img/quill.png" style="max-height:60px">
- --><!--             <a class="navbar-brand" href="/">postscripta</a>
- -->    </div>
-
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="/scribis">
-                        <img class="" src="">scribis</a>
-                </li>
-                <li>
-                	<a href="#">posts</a>
-                </li>
-                <li><a href="#">login</a></li>
-            </ul>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/scribis">
+                            <img class="" src="">scribis</a>
+                    </li>
+                    <li>
+                    	<a href="#">posts</a>
+                    </li>
+                    <li><a href="#">login</a></li>
+                </ul>
+            </div>
         </div>
-
     </div>
-</div>
-	{% block content %}{% endblock %}
+
+    <div class="container">
+        hello
+    </div>
+
+
+
 </body>
 </html>
