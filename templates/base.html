@@ -3,9 +3,9 @@
 <head>
 	<!-- <link href='https://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'> -->
 	<!-- Latest compiled and minified CSS -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<!-- <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'> -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script type="text/javascript" src="/static/js/index.js"></script>
 	<link rel="stylesheet" href="/static/css/stylesheet.css">
 
@@ -33,10 +33,10 @@
             </div>
         </div>
     </div>
-
+<!-- Note to future self and other lost programmers: Jinja and Angular expressions do not play well 2gether-->
     <div class="container">
         <div ng-repeat="imageSrc in alphaDisplayCtrl.handwrittenArray">
-            <img src="{{alphaDisplayCtrl.imageSrc}}">
+            <img src="{{ 'alphaDisplayCtrl.imageSrc' }}">
         </div>
     </div>
 
