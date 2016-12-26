@@ -1,4 +1,4 @@
-angular.module('postscriptaApp', [])
+var app = angular.module('postscriptaApp', [])
   .controller('AlphabetDisplayController', function() {
     console.log('CTRL is HERE');
     var vm = this;
@@ -64,7 +64,7 @@ angular.module('postscriptaApp', [])
       }
     };
 
-    vm.alphaImages = ['/static/img/bImg.png', '/static/img/aImg.png']
+    vm.alphaImages = ['/static/img/aImg.png', '/static/img/bImg.png']
 
     document.onkeypress = function(evt) {
       evt = evt || window.event;
@@ -79,3 +79,8 @@ angular.module('postscriptaApp', [])
 // when finished typing, call writeOutLetters to translate to pics of handwriting
       vm.writeOutLetters(vm.typedArray);
   });
+
+// app.config(['$interpolateProvider', function($interpolateProvider) {
+//   $interpolateProvider.startSymbol('{a');
+//   $interpolateProvider.endSymbol('a}');
+// }]);
