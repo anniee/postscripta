@@ -56,16 +56,21 @@ var app = angular.module('postscriptaApp', [])
       for(i=0;i<typedArray.length;i++) {
         var theLetter = typedArray[i]
         var theImg = new Image();
+        console.log('I AM WRITING LETTERS');
+        theImg.src = "/static/img/" + i + "Img.png";
+
         // theImg.src = the source of the img from object
         // theImg.src =
         // or do we need to add both img and src to an object, since need a new image
         // instantiated for displaying on page?
         // add to new array for display using src of image, handwrittenArray
+        return theImg;
       }
     };
 
     vm.alphaImages = ['/static/img/aImg.png', '/static/img/bImg.png']
 
+    // write out letters in a form and then submit to trigger transcribe
     document.onkeypress = function(evt) {
       evt = evt || window.event;
       var charCode = evt.keyCode || evt.which;
@@ -73,6 +78,13 @@ var app = angular.module('postscriptaApp', [])
       console.log(charStr);
 
       //add typed key (charStr) to typedArray
+
+      vm.typedArray.push(charStr);
+      console.log(vm.typedArray);
+      // if(charCode === "") {
+      //   console.log('CALL WRITE OUT LETTERS');
+      //   vm.writeOutLetters(typedArray);
+      // }
     return charStr;
     };
 
