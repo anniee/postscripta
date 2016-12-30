@@ -55,16 +55,23 @@ var app = angular.module('postscriptaApp', [])
     vm.writeOutLetters = function(typedArray) {
       for(i=0;i<typedArray.length;i++) {
         var theLetter = typedArray[i]
+        console.log('typed array', typedArray[i]);
         var theImg = new Image();
         console.log('I AM WRITING LETTERS');
-        theImg.src = "/static/img/" + i + "Img.png";
+        // theImg.src = "/static/img/" + typedArray[i] + "Img.png";
+        // console.log('the image src', theImg.src);
+        // vm.handwrittenArray.push(theImg.src);
+        theImg.src = "/static/img/" + typedArray[i] + "Img.png";
+        // var theImgSrcReal = String.fromCharCode(theImgSrc);
+        vm.handwrittenArray.push(theImg.src);
+        console.log('handwritten array', vm.handwrittenArray);
 
         // theImg.src = the source of the img from object
         // theImg.src =
         // or do we need to add both img and src to an object, since need a new image
         // instantiated for displaying on page?
         // add to new array for display using src of image, handwrittenArray
-        return theImg;
+        // return theImg;
       }
     };
 
@@ -90,7 +97,14 @@ var app = angular.module('postscriptaApp', [])
 
 // when finished typing, call writeOutLetters to translate to pics of handwriting
       vm.writeOutLetters(vm.typedArray);
+
+    vm.clickForText = function() {
+      // for()
+      vm.writeOutLetters(vm.typedArray);
+    }
   });
+
+
 
 // app.config(['$interpolateProvider', function($interpolateProvider) {
 //   $interpolateProvider.startSymbol('{a');

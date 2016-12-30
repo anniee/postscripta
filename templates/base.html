@@ -34,19 +34,20 @@
         </div>
     </div>
 <!-- Note to future self and other lost programmers: Jinja and Angular expressions do not play well 2gether-->
-
-    <div ng-repeat="imageSrc in alphaDisplayCtrl.alphaImages">
+<!-- DISPLAY LETTER IMAGES -->
+<!--     <div ng-repeat="imageSrc in alphaDisplayCtrl.alphaImages">
         <img height="50" ng-src={{ '{{imageSrc}}' }}>
-    </div>
+    </div> -->
 
     <div ng-model="alphaDisplayCtrl.theImg">
     </div>
-    <div class="container">
-        <div ng-show="alphaDisplayCtrl.handwrittenArray.length > 0" ng-repeat="imageSrc in alphaDisplayCtrl.handwrittenArray">
-            <img height="50" ng-src={{ '{{ imageSrc }}' }}>
-        </div>
+    <!-- <div class="container"> -->
+<!--         <div ng-show="alphaDisplayCtrl.handwrittenArray.length > 0" ng-repeat="image in alphaDisplayCtrl.handwrittenArray"> -->
+    <div ng-repeat="imageSource in alphaDisplayCtrl.handwrittenArray" class="inlineChars">
+        <img height="50" ng-src={{ '{{imageSource}}' }}>
     </div>
+    <!-- </div> -->
 
-
+    <div ng-click="alphaDisplayCtrl.clickForText()">Click me</div>
 </body>
 </html>
