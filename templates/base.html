@@ -41,13 +41,13 @@
 
     <div ng-model="alphaDisplayCtrl.theImg">
     </div>
-    <!-- <div class="container"> -->
+    <div class="container">
 <!--         <div ng-show="alphaDisplayCtrl.handwrittenArray.length > 0" ng-repeat="image in alphaDisplayCtrl.handwrittenArray"> -->
-    <div ng-repeat="imageSource in alphaDisplayCtrl.handwrittenArray" class="inlineChars">
-        <img height="50" ng-src={{ '{{imageSource}}' }}>
+        <div ng-repeat="imageSource in alphaDisplayCtrl.handwrittenArray track by $index" class="inlineChars">
+            <img height="50" ng-src={{ '{{imageSource}}' }}>
+        </div>
     </div>
-    <!-- </div> -->
 
-    <div ng-click="alphaDisplayCtrl.clickForText()">Click me</div>
+    <div ng-click="alphaDisplayCtrl.clickForText()" class="btn btn-default">Click me</div>
 </body>
 </html>

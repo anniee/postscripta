@@ -45,3 +45,9 @@ textarea:focus, input:focus {
 .inlineChars {
   display: inline;
 }
+
+.btn {
+  position: fixed;
+  bottom: 100px;
+  right: 100px;
+}
